@@ -8,7 +8,7 @@ pipeline{
     stages{
         stage('clone gie repository'){
             steps{
-                git 'https://github.com/skorik-kirill/site2.git'
+                git 'https://github.com/skorik-kirill/content.git'
             }
         }
         stage('Build image'){
