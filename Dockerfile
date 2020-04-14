@@ -1,8 +1,8 @@
-FROM php:5.6-apache
-RUN docker-php-ext-install  mysqli
+FROM wordpress:4-apache
 RUN apt-get update && apt-get install -y git
 WORKDIR /var/www/html/wp-content/themes
 RUN rm -rf twentyfifteen twentyseventeen twentysixteen
+RUN rm index.php
 RUN git clone https://github.com/skorik-kirill/content.git ./
 WORKDIR /var/www/html
 
