@@ -7,7 +7,7 @@ node {
     }
 
     stage('Push image') {
-        docker.withRegistry('https://eu.gcr.io', 'gcr:[ClusterGCP]') {
+        docker.withRegistry('https://eu.gcr.io', 'ClusterGCP') {
          app.push("${env.BUILD_NUMBER}")
          app.push("latest")
         }
