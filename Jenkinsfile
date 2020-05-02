@@ -7,7 +7,7 @@ node {
     }
 
     stage('Push image') {
-        docker.withRegistry('us.gcr.io/sincere-hybrid-274219/wordpress1', 'gcr:ClusterGPR') {
+        docker.withRegistry('https://us.gcr.io', 'gcr:ClusterGPR') {
          app.push("${env.BUILD_NUMBER}")
          app.push("latest")
         }
