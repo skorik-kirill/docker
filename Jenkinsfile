@@ -1,5 +1,6 @@
 node {
     def app
+    checkout scm 
     
     stage('Build image') {
         
