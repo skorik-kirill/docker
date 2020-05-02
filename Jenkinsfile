@@ -3,7 +3,7 @@ node {
     
     stage('Build image') {
         
-        app = docker.build("us.gcr.io/sincere-hybrid-274219/wordpress1")
+        app = docker.build("wordpress1")
     }
 
     stage('Push image') {
