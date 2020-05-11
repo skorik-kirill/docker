@@ -1,4 +1,4 @@
-node {
+node('pod') {
     def app
     checkout scm 
     
