@@ -3,7 +3,8 @@ node('pod') {
     checkout scm
    
     stage(' docker ps  ') {
-       container('docker')  
+       container('docker') {
       sh 'docker ps '
+       }
     }
     }
