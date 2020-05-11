@@ -10,4 +10,3 @@ node {
         sh 'helm list'
         }
     }
-}
