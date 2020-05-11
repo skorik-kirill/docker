@@ -1,9 +1,9 @@
 node('pod') {
-    def app
+   
     checkout scm 
     
-    stage(' test docker ') {
-      sh 'docker ps'
+    stage(' helm ') {
+      sh 'helm list'
     }
 
     stage('test helm') {
