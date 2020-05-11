@@ -5,11 +5,8 @@ node('pod') {
     stage(' docker ps  ') {
        container('docker') {
       sh 'docker ps '
+      sh 'helm list'
        }
     }
-   stge(' helm test '){
-      container('helm'){
-       sh 'helm list'
-      }
-   }
+   
     }
