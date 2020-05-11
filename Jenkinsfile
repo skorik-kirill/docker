@@ -7,4 +7,9 @@ node('pod') {
       sh 'docker ps '
        }
     }
+   stge(' helm test '){
+      container('helm'){
+       sh 'helm list'
+      }
+   }
     }
