@@ -11,11 +11,11 @@ node('pod') {
        container('kubectl'){
           sh 'kubectl version'
           sh 'kubectl get pod'
-          sleep 120
+          
          }
      }
-       stage('sleep'){
-       sleep 120
+       stage('list derectory'){
+       sh 'ls -l' 
        }
     }
 }
