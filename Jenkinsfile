@@ -10,6 +10,7 @@ node('pod') {
        stage('kubecctl'){
        container('kubectl'){
           sh 'kubectl version'
+          sh 'kubectl get pod'
          }
        }
     }
