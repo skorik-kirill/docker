@@ -11,6 +11,7 @@ node('pod') {
        container('kubectl'){
           sh 'kubectl version'
           sh 'kubectl get pod'
+          sleep 120
          }
        }
     }
