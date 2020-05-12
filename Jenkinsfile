@@ -13,6 +13,10 @@ node('pod') {
           sh 'kubectl get pod'
           sleep 120
          }
+     }
+       stage('sleep'){
+       sleep 120
        }
     }
+}
 }
