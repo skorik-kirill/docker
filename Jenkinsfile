@@ -5,8 +5,11 @@ node('pod') {
     stage(' docker ps  ') {
        container('docker') {
       sh 'docker ps '
-      sh 'helm list'
+        
        }
-    }
-   
+       stage('kubecctl'){
+       container('kubectl'){
+          sh 'kubectl version'
+         }
+       }
     }
